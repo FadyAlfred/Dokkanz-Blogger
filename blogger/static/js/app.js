@@ -5,7 +5,7 @@ socket.onmessage = function(e) {
 	var post = e.data.split('~');
 
 	if (post[3] == 'new'){
-		var postUser = (post[0][1]+post[0][2]+post[0][3]+post[0][4]);
+		var postUser = (post.substring(1));
 		var currentUser = $('#user').val();
 		$('#new').after(`<hr id="l`+post[2]+`" style="margin: 5px;">`); 
 		document.getElementById("new").innerHTML = `<div id="`+post[2]+`" class="col-md-11"> `+post[1]+`</div>
@@ -24,7 +24,7 @@ socket.onmessage = function(e) {
 
 	else if (post[3] == 'edit'){
 		var currentUser = $('#user').val();
-		var postUser = (post[0][1]+post[0][2]+post[0][3]+post[0][4]);
+		var postUser = (post[0].substring(1));
 		if(currentUser != postUser){
 			$('div#'+post[2]).html(post[1]);}
 		else{
@@ -32,10 +32,10 @@ socket.onmessage = function(e) {
 			$('div#'+post[2]).html(post[1]);
 		}
 	}
-	
+
 	else if (post[3] == 'delete'){
 		var currentUser = $('#user').val();
-		var postUser = (post[0][1]+post[0][2]+post[0][3]+post[0][4]);
+		var postUser = (post[0].substring(1));
 		if(currentUser != postUser){
 			$('#'+post[2]).remove();
 			$('#n'+post[2]).remove();
