@@ -25,7 +25,7 @@ SECRET_KEY = 'xmz9g3*nh=$(-x-ap^a5c$vd+g(q1*68@l1bdex#diafqpglg+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -107,7 +107,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "asgiref.inmemory.ChannelLayer",
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("*", 6379)],
+        },
         "ROUTING": "blogger.routing.channel_routing",
     },
 }
