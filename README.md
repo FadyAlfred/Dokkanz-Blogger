@@ -1,7 +1,8 @@
 # Dokkanz-Blogger
-> This is advanced version of Galaxy Blogger with the same functionalty but in addtion too 
-Real-Time that the user don't have too refresh the page to get the new content just when other 
-user create, edit or delte post all other user home page update with new content .
+> This is an advanced version of Galaxy Blogger with the same functionality but in 
+addition too Real-Time that the user doesn't have to refresh the page to get the 
+new content just when other users create, edit or delete post all other user home 
+page update with new content.
 
 # Install
 
