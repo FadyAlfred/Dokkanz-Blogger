@@ -115,7 +115,7 @@ Pillow==4.1.1
 ply==3.10
 prompt-toolkit==1.0.14
 psutil==5.2.2
-py==1.4.33
+py==1.10.0
 pyasn1==0.2.3
 pyasn1-modules==0.0.9
 pycosat==0.6.2
